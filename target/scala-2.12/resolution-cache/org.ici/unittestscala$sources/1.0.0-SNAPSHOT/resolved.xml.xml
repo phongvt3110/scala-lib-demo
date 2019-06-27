@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="org.ici"
+		module="unittestscala$sources"
+		revision="1.0.0-SNAPSHOT"
+		status="integration"
+		publication="20190514094115"
+	/>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+	</configurations>
+	<publications>
+	</publications>
+	<dependencies>
+		<dependency org="org.apache.maven" name="maven-profile" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-profile" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-webdav-jackrabbit" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-webdav-jackrabbit" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.reporting" name="maven-reporting-impl" rev="3.0.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-reporting-impl" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-classworlds" rev="2.5.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-classworlds" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.mojo" name="versions-maven-plugin" rev="2.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="versions-maven-plugin" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-plugin-api" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-plugin-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="oro" name="oro" rev="2.0.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="oro" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-error-diagnostics" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-error-diagnostics" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-project" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-project" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-artifact" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-artifact" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-http-shared" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-http-shared" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" transitive="false" conf="compile->default,compile,runtime,default(compile),master;runtime->default,compile,runtime,default(compile),master;test->default,compile,runtime,default(compile),master;compile-internal->default,compile,runtime,default(compile),master;runtime-internal->default,compile,runtime,default(compile),master;test-internal->default,compile,runtime,default(compile),master;scala-tool->default,compile,runtime(*),master(compile),runtime,optional,optional(default),compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.12.8/">
+			<artifact name="scala-library" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-http" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-http" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="classworlds" name="classworlds" rev="1.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="classworlds" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.7.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-beanutils" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.jcraft" name="jsch" rev="0.1.38" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="jsch" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-artifact-manager" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-artifact-manager" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-lang" name="commons-lang" rev="2.6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-lang" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.jackrabbit" name="jackrabbit-webdav" rev="1.5.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="jackrabbit-webdav" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-chain" name="commons-chain" rev="1.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-chain" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.reporting" name="maven-reporting-api" rev="3.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-reporting-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.sonatype.sisu" name="sisu-inject-bean" rev="1.4.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="sisu-inject-bean" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-model" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-model" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scala-lang.modules" name="scala-xml_2.12" rev="1.0.6" transitive="false" conf="scala-tool->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="scala-xml_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-plugin-parameter-documenter" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-plugin-parameter-documenter" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.shared" name="maven-common-artifact-filters" rev="3.0.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-common-artifact-filters" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.xbean" name="xbean-reflect" rev="3.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="xbean-reflect" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-ssh-common" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-ssh-common" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.google.collections" name="google-collections" rev="1.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="google-collections" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-core" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-core" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-interpolation" rev="1.11" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-interpolation" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-decoration-model" rev="1.7.4" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-decoration-model" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.struts" name="struts-taglib" rev="1.3.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="struts-taglib" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.sonatype.sisu" name="sisu-inject-plexus" rev="1.4.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="sisu-inject-plexus" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.velocity" name="velocity-tools" rev="2.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="velocity-tools" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-jdk14" rev="1.5.6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="slf4j-jdk14" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="junit" name="junit" rev="3.8.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="junit" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.shared" name="maven-shared-utils" rev="3.2.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-shared-utils" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-container-default" rev="1.7.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-container-default" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-skin-model" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-skin-model" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.5.6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="jcl-over-slf4j" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-digester" name="commons-digester" rev="1.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-digester" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-sink-api" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-sink-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-provider-api" rev="2.12" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-provider-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="xmlunit" name="xmlunit" rev="1.5" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="xmlunit" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.sonatype.plexus" name="plexus-sec-dispatcher" rev="1.3" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-sec-dispatcher" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-logging" name="commons-logging" rev="1.1.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-logging" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-settings" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-settings" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-interactivity-api" rev="1.0-alpha-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-interactivity-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-io" name="commons-io" rev="2.5" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-io" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.8" transitive="false" conf="scala-tool->default,compile,runtime,optional,optional(default),master">
+			<artifact name="scala-compiler" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-logging-api" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-logging-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.github.phongvt3110" name="java-ici-lib" rev="1.0.5" transitive="false" conf="compile->default,compile,runtime,default(compile),master;runtime->default,compile,runtime,default(compile),master;test->default,compile,runtime,default(compile),master;compile-internal->default,compile,runtime,default(compile),master;runtime-internal->default,compile,runtime,default(compile),master;test-internal->default,compile,runtime,default(compile),master">
+			<artifact name="java-ici-lib" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.woodstox" name="stax2-api" rev="3.1.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="stax2-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-plugin-registry" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-plugin-registry" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.sonatype.plexus" name="plexus-cipher" rev="1.4" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-cipher" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-velocity" rev="1.1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-velocity" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-site-renderer" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-site-renderer" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="javax.xml.stream" name="stax-api" rev="1.0-2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="stax-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-component-annotations" rev="1.6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-component-annotations" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-codec" name="commons-codec" rev="1.3" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-codec" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.httpcomponents" name="httpclient" rev="4.0.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="httpclient" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="nekohtml" name="nekohtml" rev="1.9.6.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="nekohtml" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="backport-util-concurrent" name="backport-util-concurrent" rev="3.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="backport-util-concurrent" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-ssh" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-ssh" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.httpcomponents" name="httpcore" rev="4.0.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="httpcore" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.struts" name="struts-tiles" rev="1.3.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="struts-tiles" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.5.6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="slf4j-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-reflect" rev="2.12.8" transitive="false" conf="scala-tool->compile,runtime(*),master(compile),runtime,compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.12.8/">
+			<artifact name="scala-reflect" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.jackrabbit" name="jackrabbit-jcr-commons" rev="1.5.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="jackrabbit-jcr-commons" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-validator" name="commons-validator" rev="1.3.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-validator" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-httpclient" name="commons-httpclient" rev="3.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-httpclient" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-module-fml" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-module-fml" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-file" rev="2.12" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-file" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-repository-metadata" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-repository-metadata" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="sslext" name="sslext" rev="1.2-0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="sslext" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="4.2.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="woodstox-core-asl" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-cli" name="commons-cli" rev="1.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-cli" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="jline" name="jline" rev="2.14.6" transitive="false" conf="scala-tool->compile,master(compile),compile(*),master">
+			<artifact name="jline" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-utils" rev="3.0.24" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-utils" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-http-lightweight" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-http-lightweight" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-monitor" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-monitor" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="dom4j" name="dom4j" rev="1.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="dom4j" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.struts" name="struts-core" rev="1.3.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="struts-core" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven" name="maven-plugin-descriptor" rev="2.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="maven-plugin-descriptor" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.wagon" name="wagon-ssh-external" rev="1.0-beta-6" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="wagon-ssh-external" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.sonatype.sisu" name="sisu-guice" rev="2.1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="sisu-guice" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-module-xhtml" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-module-xhtml" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-component-api" rev="1.0-alpha-16" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-component-api" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-nop" rev="1.5.3" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="slf4j-nop" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="commons-collections" name="commons-collections" rev="3.2.1" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="commons-collections" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.codehaus.plexus" name="plexus-i18n" rev="1.0-beta-10" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="plexus-i18n" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.maven.doxia" name="doxia-core" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="doxia-core" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.velocity" name="velocity" rev="1.7" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="velocity" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="antlr" name="antlr" rev="2.7.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="antlr" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.ici.bookingvn" name="ici-core_2.12" rev="1.0.0-SNAPSHOT" transitive="false" conf="compile->compile,default(compile);runtime->compile,default(compile);test->compile,default(compile);compile-internal->compile,default(compile);runtime-internal->compile,default(compile);test-internal->compile,default(compile)">
+			<artifact name="ici-core_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="nekohtml" name="xercesMinimal" rev="1.9.6.2" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+			<artifact name="xercesMinimal" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+	</dependencies>
+</ivy-module>
