@@ -1,0 +1,5 @@
+addSbtPlugin("com.typesafe.play"  % "sbt-plugin"         % "2.7.3")
+addSbtPlugin("com.scalapenos"     % "sbt-prompt"         % "1.0.2")
+addSbtPlugin("io.get-coursier"    % "sbt-coursier"       % "1.0.3")
+addSbtPlugin("com.github.gseitz"  % "sbt-release"        % "1.0.11")
+addSbtPlugin("com.frugalmechanic" % "fm-sbt-s3-resolver" % "0.18.0")
