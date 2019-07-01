@@ -1,4 +1,4 @@
-name := "UnitTestScala"
+name := "Penguin-lib-test"
 organization := "org.ici"
 scalaVersion := "2.13.0"
 
